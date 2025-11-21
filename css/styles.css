@@ -1,0 +1,446 @@
+/* =========================================
+   STYLE.CSS - FULLY UPDATED
+   ========================================= */
+
+/* --- General Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+    width: 260px;
+    background-color: #220095; /* Deep Indigo Blue */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Prevents sidebar from shrinking */
+}
+
+/* UPDATED: Fixed height to match main header */
+.sidebar-header {
+    height: 80px; 
+    padding: 0 20px; /* No vertical padding */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circle img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text h3 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 30px 20px;
+    flex-grow: 1; /* Pushes footer down */
+}
+
+.nav-menu li {
+    margin-bottom: 18px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+    padding-bottom: 2px;
+    transition: 0.2s ease;
+    opacity: 0.85;
+}
+
+.nav-menu a:hover {
+    opacity: 1;
+}
+
+/* The active state (Underline style shown in image) */
+.nav-menu a.active {
+    border-bottom: 2px solid white;
+    font-weight: 600;
+    opacity: 1;
+}
+
+.sidebar-footer {
+    padding: 20px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* --- Main Content Styling --- */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* UPDATED: Header - Fixed Height */
+header {
+    background-color: white;
+    height: 80px; /* STRICT FIXED HEIGHT */
+    padding: 0 40px; /* No vertical padding */
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* UPDATED: Text spacing for header */
+.header-left h1 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.header-left p {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+}
+
+.user-details {
+    text-align: right;
+}
+
+.user-name {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+}
+
+.user-role {
+    display: block;
+    font-size: 11px;
+    color: #777;
+}
+
+.user-icon i {
+    font-size: 35px;
+    color: #555;
+}
+
+/* --- Dashboard Body --- */
+.dashboard-body {
+    padding: 40px;
+    overflow-y: auto; /* Allows scrolling if content gets too long */
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+    gap: 30px;
+    max-width: 1200px;
+}
+
+/* Card Design */
+.card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    height: 180px;
+}
+
+/* Blue line in card */
+.card-accent-bar {
+    width: 8px;
+    height: 100px;
+    background-color: #220095; /* Matches Sidebar */
+    border-radius: 4px;
+    margin-right: 25px;
+}
+
+.card-info h2 {
+    color: #220095; /* Matches Sidebar */
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* --- Complaints Page Styles --- */
+.page-body {
+    padding: 30px 40px;
+    overflow-y: auto;
+}
+
+.action-header {
+    margin-bottom: 20px;
+}
+
+.action-header h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+}
+
+.action-header p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.action-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background-color: #220095; /* Sidebar Blue */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1a0075;
+}
+
+.btn-outline {
+    background-color: white;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+/* --- Content Card (White Box) --- */
+.content-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-top: 4px solid #ddd; /* Slight top border effect */
+}
+
+.content-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* --- Toolbar & Search --- */
+.table-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 5px;
+    width: 300px;
+    background: white;
+}
+
+.search-box i {
+    color: #999;
+    margin-right: 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+.quick-filters-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* --- Table Styling --- */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.styled-table th {
+    text-align: left;
+    padding: 15px 10px;
+    color: #333;
+    font-weight: 700;
+    border-bottom: 1px solid #eee;
+}
+
+.styled-table td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #f5f5f5;
+    color: #555;
+    vertical-align: middle;
+}
+
+.styled-table th i {
+    font-size: 10px;
+    color: #999;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Special Buttons inside Table */
+.btn-track {
+    background: white;
+    border: 1px solid #6a42c9;
+    color: #6a42c9;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-track:hover {
+    background: #f0ebfa;
+}
+
+.actions a {
+    text-decoration: none;
+    color: #6a42c9;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.actions a:last-child {
+    color: #666; 
+}
+
+/* --- Pagination --- */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.pagination-info {
+    font-size: 12px;
+    color: #888;
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.page-btn {
+    background: white;
+    border: 1px solid #eee;
+    padding: 5px 10px;
+    min-width: 32px;
+    height: 32px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #555;
+}
+
+.page-btn.active {
+    border: 1px solid #999;
+    font-weight: bold;
+    background-color: #f9f9f9;
+}
+
+.page-btn.text-btn {
+    width: auto;
+    padding: 5px 15px;
+}
+/* regsitration style */
+.filter-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Override the previous margin for this page */
+.filter-section .quick-filters-label {
+    margin-bottom: 0; 
+}
+
+.filter-pills {
+    display: flex;
+    gap: 8px;
+}
+
+.pill {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 6px 16px;
+    border-radius: 20px; /* Makes them round */
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pill:hover {
+    background-color: #e0e0e0;
+}
+
+.pill.active {
+    background-color: #220095; /* Blue */
+    color: white;
+}
