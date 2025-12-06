@@ -40,9 +40,9 @@
                         <a href="#" class="text-blue-700 font-bold underline hover:text-blue-900">Forgot Password?</a>
                     </div>
 
-                    <button type="submit" class="w-full bg-[#000080] text-white font-bold text-xl py-3 rounded hover:bg-blue-900 transition duration-300 shadow-lg">
-                        LOG IN
-                    </button>
+                    <a href="../website/dashboard.php" class="block w-full text-center bg-[#000080] text-white font-bold text-xl py-3 rounded hover:bg-blue-900 transition duration-300 shadow-lg">
+                    LOG IN
+                    </a>
 
                     <div class="text-center mt-6">
                         <span class="text-blue-700 font-bold">Don't have an account yet? </span>
