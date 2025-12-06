@@ -62,9 +62,9 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-                <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">
-                    + New ID
-                </button>
+                <a href="new_id.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">
+                + New ID
+                </a>
                 <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">
                     Revalidation
                 </button>
