@@ -31,28 +31,32 @@
             </li>
 
             <li>
-                <a href="complaints.php" class="flex items-center gap-3 px-3 py-2 rounded-lg font-medium text-white/80 hover:bg-white/5 hover:text-white transition">
+                <a href="complaints.php" 
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'complaints.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-file-circle-exclamation w-5"></i>
                    Complaints
                 </a>
             </li>
 
             <li>
-                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg font-medium text-white/80 hover:bg-white/5 hover:text-white transition">
+                <a href="id_printing.php" 
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'id_printing.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-id-card w-5"></i>
                    ID Printing
                 </a>
             </li>
 
             <li>
-                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg font-medium text-white/80 hover:bg-white/5 hover:text-white transition">
+                <a href="accounts.php" 
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'accounts.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-user-gear w-5"></i>
                    Accounts
                 </a>
             </li>
 
             <li>
-                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg font-medium text-white/80 hover:bg-white/5 hover:text-white transition">
+                <a href="archives.php" 
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'archives.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-box-archive w-5"></i>
                    Archives
                 </a>
@@ -66,9 +70,10 @@
             </li>
 
             <li>
-                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg font-medium text-white/80 hover:bg-white/5 hover:text-white transition">
+                <a href="announcements.php" 
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'announcements.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-bullhorn w-5"></i>
-                   Announcement
+                   Announcements
                 </a>
             </li>
 
