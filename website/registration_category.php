@@ -118,7 +118,7 @@
                         </thead>
                         <tbody class="text-gray-800 text-sm">
                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
-                                <td class="py-4 pl-2 font-mono text-gray-500">#444444</td>
+                                <td class="py-4 pl-2 font-mono text-gray-500">444444</td>
                                 <td class="py-4 font-medium">Sofia Santos</td>
                                 <td class="py-4">
                                     <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">Submitted</span>
@@ -130,7 +130,7 @@
                             </tr>
                             
                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
-                                <td class="py-4 pl-2 font-mono text-gray-500">#110010</td>
+                                <td class="py-4 pl-2 font-mono text-gray-500">110010</td>
                                 <td class="py-4 font-medium">Duplicate Ex</td>
                                 <td class="py-4">
                                     <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">Printed</span>
@@ -142,7 +142,7 @@
                             </tr>
 
                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
-                                <td class="py-4 pl-2 font-mono text-gray-500">#210101</td>
+                                <td class="py-4 pl-2 font-mono text-gray-500">210101</td>
                                 <td class="py-4 font-medium">Rey Flores</td>
                                 <td class="py-4">
                                     <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">Printed</span>
@@ -154,7 +154,7 @@
                             </tr>
 
                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
-                                <td class="py-4 pl-2 font-mono text-gray-500">#212102</td>
+                                <td class="py-4 pl-2 font-mono text-gray-500">212102</td>
                                 <td class="py-4 font-medium">Rey Flores</td>
                                 <td class="py-4">
                                     <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded text-xs font-semibold">Draft</span>
@@ -166,7 +166,7 @@
                             </tr>
 
                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
-                                <td class="py-4 pl-2 font-mono text-gray-500">#586953</td>
+                                <td class="py-4 pl-2 font-mono text-gray-500">586953</td>
                                 <td class="py-4 font-medium">Rey Flores</td>
                                 <td class="py-4">
                                     <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs font-semibold">Pending</span>
