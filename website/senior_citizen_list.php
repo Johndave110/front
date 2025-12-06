@@ -35,32 +35,11 @@
 <body class="bg-osca-bg font-sans flex text-gray-800">
 
     <?php
+    // Sets the active page for the sidebar
     $current_page = basename($_SERVER['PHP_SELF']);
     ?>
-    <aside class="w-64 bg-dashboardBlue text-white fixed h-full left-0 top-0 flex flex-col z-50 shadow-2xl font-sans">
-        
-        <div class="px-6 py-6 flex items-center gap-3">
-            <div class="h-12 w-12 bg-yellow-400 rounded-full flex items-center justify-center border-2 border-white overflow-hidden shrink-0">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ph_seal_zamboanga_city.png/1200px-Ph_seal_zamboanga_city.png" alt="Logo" class="w-full h-full object-cover">
-            </div>
-            <h1 class="font-bold text-xl tracking-wide uppercase">OSCA</h1>
-        </div>
 
-        <div class="px-4">
-            <hr class="border-white/50">
-        </div>
-
-        <?php include 'sidebar.php'; ?>
-
-        <div class="px-4">
-            <hr class="border-white/50">
-        </div>
-
-        <div class="p-6">
-            <a href="#" class="block font-bold text-center text-white hover:text-gray-200 transition">Settings</a>
-        </div>
-
-    </aside>
+    <?php include 'sidebar.php'; ?>
 
     <div class="ml-64 w-full min-h-screen flex flex-col">
         
@@ -69,20 +48,28 @@
         <main class="flex-1 p-8 overflow-y-auto">
             
             <div class="mb-6">
-                <h2 class="text-2xl font-bold text-gray-800">Registration Category</h2>
-                <p class="text-gray-600">Manage senior citizen ID applications and registrations</p>
+                <h2 class="text-2xl font-bold text-gray-800">Senior Citizen List</h2>
+                <p class="text-gray-600">Master list of all registered senior citizens in Zamboanga City</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-                <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">+ New ID</button>
-                <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">Revalidation</button>
-                <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">Lost/Damage ID</button>
-                <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">Registration Report</button>
+                <a href="new_id.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
+                   <i class="fa-solid fa-plus"></i> New ID
+                </a>
+                <a href="revalidation.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
+                Revalidation
+                </a>
+                <a href="revalidation.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
+                Lost/Damage ID
+                </a>
+                <a href="revalidation.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
+                Registration Report
+                </a>
             </div>
 
             <div class="bg-white rounded-lg shadow-md p-6">
                 
-                <h3 class="text-lg font-bold text-black mb-4">Senior Citizen List</h3>
+                <h3 class="text-lg font-bold text-black mb-4">Master List</h3>
 
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
                     <div class="flex items-center gap-2 w-full md:w-auto">
@@ -99,7 +86,7 @@
 
                     <div class="flex gap-2">
                         <a href="registration_category.php" class="px-4 py-2 border border-gray-400 rounded-md text-sm font-medium hover:bg-gray-50 text-gray-700">
-                            Application List
+                            Back to Applications
                         </a>
                         <button class="px-4 py-2 border border-gray-400 rounded-md text-sm font-medium hover:bg-gray-50 text-gray-700 flex items-center gap-2">
                             <i class="fa-regular fa-file-excel text-green-600"></i> Export to Excel
@@ -108,12 +95,12 @@
                 </div>
 
                 <div class="flex flex-wrap items-center gap-2 mb-6 text-sm">
-                    <span class="text-gray-600 font-medium mr-1">Quick Filters:</span>
-                    <button class="bg-dashboardBlue text-white px-4 py-1 rounded-full text-xs font-semibold">All</button>
-                    <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-gray-300">Septuagenarian</button>
-                    <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-gray-300">Octogenarian</button>
-                    <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-gray-300">Nonagenarian</button>
-                    <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-gray-300">Centenarian</button>
+                    <span class="text-gray-600 font-medium mr-1">Age Filter:</span>
+                    <button class="bg-dashboardBlue text-white px-4 py-1 rounded-full text-xs font-semibold shadow-sm">All</button>
+                    <button class="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-blue-100 hover:text-blue-700 transition">Septuagenarian (70-79)</button>
+                    <button class="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-yellow-100 hover:text-yellow-700 transition">Octogenarian (80-89)</button>
+                    <button class="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-red-100 hover:text-red-700 transition">Nonagenarian (90-99)</button>
+                    <button class="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-purple-100 hover:text-purple-700 transition">Centenarian (100+)</button>
                 </div>
 
                 <div class="overflow-x-auto">
@@ -134,12 +121,14 @@
                         </thead>
                         <tbody class="text-gray-800 text-sm">
                             
-                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
                                 <td class="py-4 pl-2"><input type="checkbox" class="w-4 h-4 rounded border-gray-300"></td>
-                                <td class="py-4">444444</td>
-                                <td class="py-4">Ahmadnur Jul</td>
+                                <td class="py-4 font-mono text-gray-500">444444</td>
+                                <td class="py-4 font-medium">Ahmadnur Jul</td>
                                 <td class="py-4">Tetuan</td>
-                                <td class="py-4">Septuagenarian</td>
+                                <td class="py-4">
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">Septuagenarian</span>
+                                </td>
                                 <td class="py-4">73</td>
                                 <td class="py-4">Male</td>
                                 <td class="py-4 text-right pr-4">
@@ -147,12 +136,14 @@
                                 </td>
                             </tr>
 
-                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
                                 <td class="py-4 pl-2"><input type="checkbox" class="w-4 h-4 rounded border-gray-300"></td>
-                                <td class="py-4">444444</td>
-                                <td class="py-4">Juan Dela Cruz</td>
+                                <td class="py-4 font-mono text-gray-500">444445</td>
+                                <td class="py-4 font-medium">Juan Dela Cruz</td>
                                 <td class="py-4">Tetuan</td>
-                                <td class="py-4">Octogenarian</td>
+                                <td class="py-4">
+                                    <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-semibold">Octogenarian</span>
+                                </td>
                                 <td class="py-4">80</td>
                                 <td class="py-4">Male</td>
                                 <td class="py-4 text-right pr-4">
@@ -160,12 +151,14 @@
                                 </td>
                             </tr>
 
-                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
                                 <td class="py-4 pl-2"><input type="checkbox" class="w-4 h-4 rounded border-gray-300"></td>
-                                <td class="py-4">444444</td>
-                                <td class="py-4">Maria Santos</td>
+                                <td class="py-4 font-mono text-gray-500">444446</td>
+                                <td class="py-4 font-medium">Maria Santos</td>
                                 <td class="py-4">Tetuan</td>
-                                <td class="py-4">Nonagenarian</td>
+                                <td class="py-4">
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">Nonagenarian</span>
+                                </td>
                                 <td class="py-4">94</td>
                                 <td class="py-4">Female</td>
                                 <td class="py-4 text-right pr-4">
@@ -173,12 +166,14 @@
                                 </td>
                             </tr>
 
-                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
                                 <td class="py-4 pl-2"><input type="checkbox" class="w-4 h-4 rounded border-gray-300"></td>
-                                <td class="py-4">444444</td>
-                                <td class="py-4">Juan Dela Cruz</td>
+                                <td class="py-4 font-mono text-gray-500">444447</td>
+                                <td class="py-4 font-medium">Pedro Penduko</td>
                                 <td class="py-4">Tetuan</td>
-                                <td class="py-4">Septuagenarian</td>
+                                <td class="py-4">
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">Septuagenarian</span>
+                                </td>
                                 <td class="py-4">75</td>
                                 <td class="py-4">Male</td>
                                 <td class="py-4 text-right pr-4">
@@ -186,40 +181,16 @@
                                 </td>
                             </tr>
 
-                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
                                 <td class="py-4 pl-2"><input type="checkbox" class="w-4 h-4 rounded border-gray-300"></td>
-                                <td class="py-4">444444</td>
-                                <td class="py-4">Juan Dela Cruz</td>
+                                <td class="py-4 font-mono text-gray-500">444448</td>
+                                <td class="py-4 font-medium">Lola Basyang</td>
                                 <td class="py-4">Tetuan</td>
-                                <td class="py-4">Septuagenarian</td>
-                                <td class="py-4">70</td>
-                                <td class="py-4">Male</td>
-                                <td class="py-4 text-right pr-4">
-                                    <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50">View</button>
+                                <td class="py-4">
+                                    <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">Centenarian</span>
                                 </td>
-                            </tr>
-
-                            <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                <td class="py-4 pl-2"><input type="checkbox" class="w-4 h-4 rounded border-gray-300"></td>
-                                <td class="py-4">444444</td>
-                                <td class="py-4">Juan Dela Cruz</td>
-                                <td class="py-4">Tetuan</td>
-                                <td class="py-4">Septuagenarian</td>
-                                <td class="py-4">79</td>
-                                <td class="py-4">Male</td>
-                                <td class="py-4 text-right pr-4">
-                                    <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50">View</button>
-                                </td>
-                            </tr>
-
-                            <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                <td class="py-4 pl-2"><input type="checkbox" class="w-4 h-4 rounded border-gray-300"></td>
-                                <td class="py-4">444444</td>
-                                <td class="py-4">Juan Dela Cruz</td>
-                                <td class="py-4">Tetuan</td>
-                                <td class="py-4">Octogenarian</td>
-                                <td class="py-4">86</td>
-                                <td class="py-4">Male</td>
+                                <td class="py-4">101</td>
+                                <td class="py-4">Female</td>
                                 <td class="py-4 text-right pr-4">
                                     <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50">View</button>
                                 </td>
@@ -231,13 +202,13 @@
 
                 <div class="flex flex-col md:flex-row justify-between items-center mt-6 text-sm text-gray-600">
                     <div class="mb-4 md:mb-0">
-                        Showing 1 to 7 of 135 Applications
+                        Showing 1 to 5 of 135 Seniors
                     </div>
                     <div class="flex items-center gap-2">
                         <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 flex items-center gap-1">
                             <i class="fa-solid fa-angles-left text-xs"></i> Previous
                         </button>
-                        <button class="w-8 h-8 border border-gray-300 rounded hover:bg-gray-50 flex items-center justify-center">1</button>
+                        <button class="w-8 h-8 bg-dashboardBlue text-white rounded flex items-center justify-center">1</button>
                         <button class="w-8 h-8 border border-gray-300 rounded hover:bg-gray-50 flex items-center justify-center">2</button>
                         <button class="w-8 h-8 border border-gray-300 rounded hover:bg-gray-50 flex items-center justify-center">3</button>
                         <span class="px-2">...</span>

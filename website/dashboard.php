@@ -17,7 +17,6 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        // I mapped your class name 'dashboardBlue' to the OSCA color
                         dashboardBlue: '#1a008e', 
                         'osca-text': '#1a008e',
                     }
@@ -34,35 +33,13 @@
 </head>
 <body class="bg-gray-100 font-sans flex text-gray-800">
 
-    <?php
-    // Get the current page name to set the active state
-    // Note: Since this file is dashboard.php, the Dashboard link will automatically bold itself
-    $current_page = basename($_SERVER['PHP_SELF']);
+    <?php 
+    // This sets the active page for the sidebar logic
+    $current_page = basename($_SERVER['PHP_SELF']); 
     ?>
-    <aside class="w-64 bg-dashboardBlue text-white fixed h-full left-0 top-0 flex flex-col z-50 shadow-2xl font-sans">
-        
-        <div class="px-6 py-6 flex items-center gap-3">
-            <div class="h-12 w-12 bg-yellow-400 rounded-full flex items-center justify-center border-2 border-white overflow-hidden shrink-0">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ph_seal_zamboanga_city.png/1200px-Ph_seal_zamboanga_city.png" alt="Logo" class="w-full h-full object-cover">
-            </div>
-            <h1 class="font-bold text-xl tracking-wide uppercase">OSCA</h1>
-        </div>
 
-        <div class="px-4">
-            <hr class="border-white/50">
-        </div>
+    <?php include 'sidebar.php'; ?>
 
-        <?php include 'sidebar.php'; ?>
-
-        <div class="px-4">
-            <hr class="border-white/50">
-        </div>
-
-        <div class="p-6">
-            <a href="#" class="block font-bold text-center text-white hover:text-gray-200 transition">Settings</a>
-        </div>
-
-    </aside>
     <div class="ml-64 w-full min-h-screen flex flex-col">
         
         <?php include 'header.php'; ?>
@@ -112,48 +89,31 @@
                         <thead>
                             <tr class="text-black font-bold text-sm border-b border-gray-200">
                                 <th class="pb-4 pl-2">Event Name</th>
-                                <th class="pb-4">
-                                    Target Audience <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer hover:text-gray-600"></i>
-                                </th>
-                                <th class="pb-4">
-                                    Date Event <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer hover:text-gray-600"></i>
-                                </th>
-                                <th class="pb-4">
-                                    Location <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer hover:text-gray-600"></i>
-                                </th>
+                                <th class="pb-4">Target Audience <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer hover:text-gray-600"></i></th>
+                                <th class="pb-4">Date Event <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer hover:text-gray-600"></i></th>
+                                <th class="pb-4">Location <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer hover:text-gray-600"></i></th>
                                 <th class="pb-4 text-center">Actions</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-800 text-sm">
-                            
                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
                                 <td class="py-4 pl-2 font-medium">Medical Mission 2025</td>
                                 <td class="py-4">All Senior Citizen</td>
-                                <td class="py-4">
-                                    Oct 25, 2025 <span class="ml-2 text-gray-500">9:00 AM</span>
-                                </td>
+                                <td class="py-4">Oct 25, 2025 <span class="ml-2 text-gray-500">9:00 AM</span></td>
                                 <td class="py-4">Barangay Hall</td>
                                 <td class="py-4 text-center">
-                                    <button class="px-6 py-1.5 border border-dashboardBlue text-dashboardBlue rounded hover:bg-indigo-50 transition text-xs font-semibold">
-                                        View
-                                    </button>
+                                    <button class="px-6 py-1.5 border border-dashboardBlue text-dashboardBlue rounded hover:bg-indigo-50 transition text-xs font-semibold">View</button>
                                 </td>
                             </tr>
-
                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
                                 <td class="py-4 pl-2 font-medium">Quarterly Pension</td>
                                 <td class="py-4">Ages 80-89</td>
-                                <td class="py-4">
-                                    Oct 25, 2025 <span class="ml-2 text-gray-500">9:00 AM</span>
-                                </td>
+                                <td class="py-4">Oct 25, 2025 <span class="ml-2 text-gray-500">9:00 AM</span></td>
                                 <td class="py-4">DSWD</td>
                                 <td class="py-4 text-center">
-                                    <button class="px-6 py-1.5 border border-dashboardBlue text-dashboardBlue rounded hover:bg-indigo-50 transition text-xs font-semibold">
-                                        View
-                                    </button>
+                                    <button class="px-6 py-1.5 border border-dashboardBlue text-dashboardBlue rounded hover:bg-indigo-50 transition text-xs font-semibold">View</button>
                                 </td>
                             </tr>
-
                         </tbody>
                     </table>
                 </div>
@@ -161,6 +121,5 @@
 
         </main>
     </div>
-
 </body>
 </html>
