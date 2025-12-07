@@ -37,7 +37,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
             <div class="flex items-center space-x-3 mb-4 md:mb-0">
                 <div class="h-12 w-12 rounded-full bg-yellow-400 border-2 border-white flex items-center justify-center text-brandBlue font-bold text-xs overflow-hidden">
-                   <img src="https://placehold.co/60x60/transparent/white?text=LOGO" alt="Logo">
+                   <img src="../img/Osca logo.jpg" alt="Logo">
                 </div>
                 <div class="leading-tight">
                     <p class="text-xs uppercase tracking-wider opacity-80">City of Zamboanga</p>

@@ -2,7 +2,7 @@
     
     <div class="px-6 py-6 flex items-center gap-3">
         <div class="h-12 w-12 bg-yellow-400 rounded-full flex items-center justify-center border-2 border-white overflow-hidden shrink-0">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ph_seal_zamboanga_city.png/1200px-Ph_seal_zamboanga_city.png" alt="Logo" class="w-full h-full object-cover">
+            <img src="../img/Osca logo.jpg" alt="Logo" class="w-full h-full object-cover">
         </div>
         <h1 class="font-bold text-xl tracking-wide uppercase">OSCA</h1>
     </div>
