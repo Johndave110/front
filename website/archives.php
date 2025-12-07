@@ -47,9 +47,11 @@
 
         <main class="flex-1 p-8 overflow-y-auto">
             
-            <div class="mb-6">
-                <h2 class="text-3xl font-bold text-gray-900">Archive</h2>
-                <p class="text-gray-600 mt-1">Complete history of all senior citizens records and activities</p>
+            <div class="bg-white p-6 rounded-lg shadow-sm mb-6 border border-gray-100">
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold text-gray-900">Archive</h2>
+                    <p class="text-gray-600 mt-1">Complete history of all senior citizens records and activities</p>
+                </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-md p-6">

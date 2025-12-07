@@ -47,9 +47,11 @@
 
         <main class="flex-1 p-8 overflow-y-auto">
             
-            <div class="mb-6 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <h2 class="text-2xl font-bold text-gray-800">ID Printing</h2>
-                <p class="text-gray-600 mt-1">Print Senior Citizen's ID</p>
+            <div class="bg-white p-6 rounded-lg shadow-sm mb-6 border border-gray-100">
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold text-gray-900">ID Printing</h2>
+                    <p class="text-gray-600 mt-1">Print Senior Citizen's ID</p>
+                </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-md p-6">

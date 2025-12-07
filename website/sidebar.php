@@ -24,7 +24,7 @@
             
             <li>
                 <a href="registration_category.php" 
-                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'registration_category.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'registration_category.php' || $current_page == 'senior_citizen_list.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-users w-5"></i>
                    Registration
                 </a>
@@ -32,7 +32,7 @@
 
             <li>
                 <a href="complaints.php" 
-                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'complaints.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'complaints.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-file-circle-exclamation w-5"></i>
                    Complaints
                 </a>
@@ -63,7 +63,8 @@
             </li>
 
             <li>
-                <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg font-medium text-white/80 hover:bg-white/5 hover:text-white transition">
+                <a href="heatmap.php" 
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'heatmap.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-map-location-dot w-5"></i>
                    Heat Map
                 </a>

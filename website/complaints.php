@@ -47,19 +47,21 @@
 
         <main class="flex-1 p-8 overflow-y-auto">
             
-            <div class="mb-6">
-                <h2 class="text-2xl font-bold text-gray-800">Complaint Category</h2>
-                <p class="text-gray-600">File and manage complaints for Senior Citizens</p>
-            </div>
-
-            <div class="flex flex-wrap gap-4 mb-8">
-                <button class="bg-dashboardBlue text-white py-3 px-6 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center gap-2">
-                    <i class="fa-solid fa-file-pen"></i> File Complaint
-                </button>
+            <div class="bg-white p-6 rounded-lg shadow-sm mb-6 border border-gray-100">
                 
-                <button class="bg-white text-dashboardBlue border border-dashboardBlue py-3 px-6 rounded-md font-bold hover:bg-indigo-50 transition shadow-sm flex items-center gap-2">
-                    <i class="fa-solid fa-chart-pie"></i> Complaint Report
-                </button>
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold text-gray-900">Complaint Category</h2>
+                    <p class="text-gray-600 mt-1">File and manage complaints for Senior Citizens</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
+                        File Complaint
+                    </button>
+                    <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">
+                        Complaint Report
+                    </button>
+                </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-md p-6">

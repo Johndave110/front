@@ -47,29 +47,33 @@
 
         <main class="flex-1 p-8 overflow-y-auto">
             
-            <div class="mb-6">
-                <h2 class="text-2xl font-bold text-gray-800">Senior Citizen List</h2>
-                <p class="text-gray-600">Master list of all registered senior citizens in Zamboanga City</p>
-            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm mb-6 border border-gray-100">
+                
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold text-gray-900">Registration Category</h2>
+                    <p class="text-gray-600 mt-1">Manage senior citizen ID applications and registrations</p>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-                <a href="new_id.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
-                   <i class="fa-solid fa-plus"></i> New ID
-                </a>
-                <a href="revalidation.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
-                Revalidation
-                </a>
-                <a href="revalidation.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
-                Lost/Damage ID
-                </a>
-                <a href="revalidation.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
-                Registration Report
-                </a>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-plus"></i> New ID
+                    </button>
+                    <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">
+                        Revalidation/Update
+                    </button>
+                    <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">
+                        Lost/Damage ID
+                    </button>
+                    <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">
+                        Report
+                    </button>
+                </div>
+
             </div>
 
             <div class="bg-white rounded-lg shadow-md p-6">
                 
-                <h3 class="text-lg font-bold text-black mb-4">Master List</h3>
+                <h3 class="text-lg font-bold text-black mb-4">Senior Citizen List</h3>
 
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
                     <div class="flex items-center gap-2 w-full md:w-auto">
@@ -86,7 +90,7 @@
 
                     <div class="flex gap-2">
                         <a href="registration_category.php" class="px-4 py-2 border border-gray-400 rounded-md text-sm font-medium hover:bg-gray-50 text-gray-700">
-                            Back to Applications
+                            Applications List
                         </a>
                         <button class="px-4 py-2 border border-gray-400 rounded-md text-sm font-medium hover:bg-gray-50 text-gray-700 flex items-center gap-2">
                             <i class="fa-regular fa-file-excel text-green-600"></i> Export to Excel

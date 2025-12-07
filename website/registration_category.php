@@ -19,7 +19,7 @@
                     colors: {
                         dashboardBlue: '#1a008e', 
                         'osca-text': '#1a008e',
-                        'osca-bg': '#f3f4f6', // Kept your custom background color
+                        'osca-bg': '#f3f4f6',
                     }
                 }
             }
@@ -35,7 +35,7 @@
 <body class="bg-osca-bg font-sans flex text-gray-800">
 
     <?php
-    // Sets the active state in the sidebar
+    // Sets the active page for sidebar highlighting
     $current_page = basename($_SERVER['PHP_SELF']);
     ?>
 
@@ -47,24 +47,28 @@
 
         <main class="flex-1 p-8 overflow-y-auto">
             
-            <div class="mb-6">
-                <h2 class="text-2xl font-bold text-gray-800">Registration Category</h2>
-                <p class="text-gray-600">Manage senior citizen ID applications and registrations</p>
-            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm mb-6 border border-gray-100">
+                
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold text-gray-900">Registration Category</h2>
+                    <p class="text-gray-600 mt-1">Manage senior citizen ID applications and registrations</p>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-                <a href="new_id.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
-                   <i class="fa-solid fa-plus"></i> New ID
-                </a>
-                <a href="revalidation.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
-                Revalidation
-                </a>
-                <a href="revalidation.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
-                Lost/Damage ID
-                </a>
-                <a href="revalidation.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
-                Registration Report
-                </a>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-plus"></i> New ID
+                    </button>
+                    <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">
+                        Revalidation/Update
+                    </button>
+                    <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">
+                        Lost/Damage ID
+                    </button>
+                    <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">
+                        Report
+                    </button>
+                </div>
+
             </div>
 
             <div class="bg-white rounded-lg shadow-md p-6">
@@ -72,128 +76,210 @@
                 <h3 class="text-lg font-bold text-black mb-4">Application List</h3>
 
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+                    
                     <div class="flex items-center gap-2 w-full md:w-auto">
                         <div class="relative w-full md:w-80">
                             <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                                 <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
                             </span>
-                            <input type="text" placeholder="Search by name" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-dashboardBlue text-sm">
+                            <input type="text" placeholder="Search by name" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-dashboardBlue text-sm">
                         </div>
-                        <button class="p-2 border border-gray-300 rounded-md hover:bg-gray-50 text-gray-600">
+                        <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 text-gray-600 transition" title="Refresh">
                             <i class="fa-solid fa-rotate"></i>
                         </button>
                     </div>
 
                     <div class="flex gap-2">
-                        <a href="senior_citizen_list.php" class="px-4 py-2 border border-gray-400 rounded-md text-sm font-medium hover:bg-gray-50 text-gray-700">
-                            Senior Citizen List</a>
-                        <button class="px-4 py-2 border border-gray-400 rounded-md text-sm font-medium hover:bg-gray-50 text-gray-700 flex items-center gap-2">
+                        <a href="senior_citizen_list.php" class="px-4 py-2 border border-gray-400 rounded text-sm font-medium hover:bg-gray-50 text-gray-700 transition">
+                            Senior Citizen List
+                        </a>
+                        <button class="px-4 py-2 border border-gray-400 rounded text-sm font-medium hover:bg-gray-50 text-gray-700 flex items-center gap-2 transition">
                             <i class="fa-regular fa-file-excel text-green-600"></i> Export to Excel
                         </button>
                     </div>
                 </div>
 
                 <div class="flex flex-wrap items-center gap-2 mb-6 text-sm">
-                    <span class="text-gray-600 font-medium mr-1">Quick Filters:</span>
-                    <button class="bg-dashboardBlue text-white px-4 py-1 rounded-full text-xs font-semibold shadow-sm">All</button>
-                    <button class="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-gray-200 transition">Claimed</button>
-                    <button class="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-gray-200 transition">Verified</button>
-                    <button class="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-gray-200 transition">Printed</button>
-                    <button class="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-gray-200 transition">Ready for Release</button>
-                    <button class="bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold hover:bg-gray-200 transition">Drafts</button>
+                    <span class="text-gray-800 font-medium mr-1">Quick Filters:</span>
+                    <button class="bg-dashboardBlue text-white px-4 py-1 rounded-full text-xs font-medium shadow-sm">All</button>
+                    <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-xs font-medium hover:bg-gray-300 transition">Claimed</button>
+                    <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-xs font-medium hover:bg-gray-300 transition">Verified</button>
+                    <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-xs font-medium hover:bg-gray-300 transition">Printed</button>
+                    <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-xs font-medium hover:bg-gray-300 transition">Ready for Release</button>
+                    <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-xs font-medium hover:bg-gray-300 transition">Drafts</button>
                 </div>
 
                 <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse min-w-[800px]">
+                    <table class="w-full text-left border-collapse min-w-[900px]">
                         <thead>
                             <tr class="text-black font-bold text-sm border-b border-gray-200">
-                                <th class="pb-3 pl-2">Application ID</th>
-                                <th class="pb-3">Name <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer"></i></th>
-                                <th class="pb-3">Status</th>
-                                <th class="pb-3">Type <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer"></i></th>
-                                <th class="pb-3">Age <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer"></i></th>
-                                <th class="pb-3">Track Application</th>
-                                <th class="pb-3">Actions</th>
+                                <th class="pb-4 pl-2">Application ID</th>
+                                <th class="pb-4 cursor-pointer hover:text-dashboardBlue">Name <i class="fa-solid fa-sort text-gray-400 ml-1"></i></th>
+                                <th class="pb-4">Status</th>
+                                <th class="pb-4 cursor-pointer hover:text-dashboardBlue">Type <i class="fa-solid fa-sort text-gray-400 ml-1"></i></th>
+                                <th class="pb-4 cursor-pointer hover:text-dashboardBlue">Age <i class="fa-solid fa-sort text-gray-400 ml-1"></i></th>
+                                <th class="pb-4">Track Application</th>
+                                <th class="pb-4">Actions</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-800 text-sm">
-                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
-                                <td class="py-4 pl-2 font-mono text-gray-500">444444</td>
-                                <td class="py-4 font-medium">Sofia Santos</td>
-                                <td class="py-4">
-                                    <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">Submitted</span>
-                                </td>
-                                <td class="py-4">New ID</td>
-                                <td class="py-4">60</td>
-                                <td class="py-4"><button class="px-4 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50">View Status</button></td>
-                                <td class="py-4 text-dashboardBlue font-medium"><a href="#" class="mr-3 hover:underline">View</a> <a href="#" class="hover:underline">Delete</a></td>
-                            </tr>
                             
-                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
-                                <td class="py-4 pl-2 font-mono text-gray-500">110010</td>
-                                <td class="py-4 font-medium">Duplicate Ex</td>
-                                <td class="py-4">
-                                    <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">Printed</span>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
+                                <td class="pl-2">444444</td>
+                                <td>Sofia Santos</td>
+                                <td>Submitted</td>
+                                <td>New ID</td>
+                                <td>60</td>
+                                <td>
+                                    <button class="px-4 py-1.5 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        View Status
+                                    </button>
                                 </td>
-                                <td class="py-4">Renewal</td>
-                                <td class="py-4">61</td>
-                                <td class="py-4"><button class="px-4 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50">View Status</button></td>
-                                <td class="py-4 text-dashboardBlue font-medium"><a href="#" class="mr-3 hover:underline">View</a> <a href="#" class="hover:underline">Delete</a></td>
+                                <td class="text-dashboardBlue font-medium">
+                                    <a href="#" class="mr-3 hover:underline">View</a>
+                                    <a href="#" class="hover:underline">Delete</a>
+                                </td>
                             </tr>
 
-                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
-                                <td class="py-4 pl-2 font-mono text-gray-500">210101</td>
-                                <td class="py-4 font-medium">Rey Flores</td>
-                                <td class="py-4">
-                                    <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">Printed</span>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
+                                <td class="pl-2">110010</td>
+                                <td>Duplicate Ex</td>
+                                <td>Printed</td>
+                                <td>Renewal</td>
+                                <td>61</td>
+                                <td>
+                                    <button class="px-4 py-1.5 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        View Status
+                                    </button>
                                 </td>
-                                <td class="py-4">Lost</td>
-                                <td class="py-4">65</td>
-                                <td class="py-4"><button class="px-4 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50">View Status</button></td>
-                                <td class="py-4 text-dashboardBlue font-medium"><a href="#" class="mr-3 hover:underline">View</a> <a href="#" class="hover:underline">Delete</a></td>
+                                <td class="text-dashboardBlue font-medium">
+                                    <a href="#" class="mr-3 hover:underline">View</a>
+                                    <a href="#" class="hover:underline">Delete</a>
+                                </td>
                             </tr>
 
-                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
-                                <td class="py-4 pl-2 font-mono text-gray-500">212102</td>
-                                <td class="py-4 font-medium">Rey Flores</td>
-                                <td class="py-4">
-                                    <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded text-xs font-semibold">Draft</span>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
+                                <td class="pl-2">210101</td>
+                                <td>Rey Flores</td>
+                                <td>Printed</td>
+                                <td>Lost</td>
+                                <td>65</td>
+                                <td>
+                                    <button class="px-4 py-1.5 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        View Status
+                                    </button>
                                 </td>
-                                <td class="py-4">Damaged</td>
-                                <td class="py-4">65</td>
-                                <td class="py-4"><button class="px-8 py-1 border border-gray-400 text-gray-600 rounded text-xs font-medium hover:bg-gray-100">Edit</button></td>
-                                <td class="py-4 text-dashboardBlue font-medium"><a href="#" class="mr-3 hover:underline">View</a> <a href="#" class="hover:underline">Delete</a></td>
+                                <td class="text-dashboardBlue font-medium">
+                                    <a href="#" class="mr-3 hover:underline">View</a>
+                                    <a href="#" class="hover:underline">Delete</a>
+                                </td>
                             </tr>
 
-                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
-                                <td class="py-4 pl-2 font-mono text-gray-500">586953</td>
-                                <td class="py-4 font-medium">Rey Flores</td>
-                                <td class="py-4">
-                                    <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs font-semibold">Pending</span>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
+                                <td class="pl-2">212102</td>
+                                <td>Rey Flores</td>
+                                <td>Draft</td>
+                                <td>Damaged</td>
+                                <td>65</td>
+                                <td>
+                                    <button class="px-8 py-1.5 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        Edit
+                                    </button>
                                 </td>
-                                <td class="py-4">Damaged</td>
-                                <td class="py-4">65</td>
-                                <td class="py-4"><button class="px-4 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50">View Status</button></td>
-                                <td class="py-4 text-dashboardBlue font-medium"><a href="#" class="mr-3 hover:underline">View</a> <a href="#" class="hover:underline">Delete</a></td>
+                                <td class="text-dashboardBlue font-medium">
+                                    <a href="#" class="mr-3 hover:underline">View</a>
+                                    <a href="#" class="hover:underline">Delete</a>
+                                </td>
                             </tr>
+
+                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
+                                <td class="pl-2">586953</td>
+                                <td>Rey Flores</td>
+                                <td>Pending</td>
+                                <td>Damaged</td>
+                                <td>65</td>
+                                <td>
+                                    <button class="px-4 py-1.5 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        View Status
+                                    </button>
+                                </td>
+                                <td class="text-dashboardBlue font-medium">
+                                    <a href="#" class="mr-3 hover:underline">View</a>
+                                    <a href="#" class="hover:underline">Delete</a>
+                                </td>
+                            </tr>
+
+                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
+                                <td class="pl-2">444444</td>
+                                <td>Rey Flores</td>
+                                <td>Draft</td>
+                                <td>New ID</td>
+                                <td>65</td>
+                                <td>
+                                    <button class="px-8 py-1.5 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        Edit
+                                    </button>
+                                </td>
+                                <td class="text-dashboardBlue font-medium">
+                                    <a href="#" class="mr-3 hover:underline">View</a>
+                                    <a href="#" class="hover:underline">Delete</a>
+                                </td>
+                            </tr>
+
+                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
+                                <td class="pl-2">444444</td>
+                                <td>Draft Example</td>
+                                <td>Draft</td>
+                                <td>Lost</td>
+                                <td>65</td>
+                                <td>
+                                    <button class="px-8 py-1.5 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        Edit
+                                    </button>
+                                </td>
+                                <td class="text-dashboardBlue font-medium">
+                                    <a href="#" class="mr-3 hover:underline">View</a>
+                                    <a href="#" class="hover:underline">Delete</a>
+                                </td>
+                            </tr>
+
+                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
+                                <td class="pl-2">444444</td>
+                                <td>Rey Flores</td>
+                                <td>Claimed</td>
+                                <td>Lost</td>
+                                <td>65</td>
+                                <td>
+                                    <button class="px-6 py-1.5 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        Completed
+                                    </button>
+                                </td>
+                                <td class="text-dashboardBlue font-medium">
+                                    <a href="#" class="mr-3 hover:underline">View</a>
+                                    <a href="#" class="hover:underline">Delete</a>
+                                </td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>
 
-                <div class="flex flex-col md:flex-row justify-between items-center mt-6 text-sm text-gray-600">
-                    <div class="mb-4 md:mb-0">
+                <div class="flex justify-between items-center mt-8 text-sm text-gray-600 border-t border-gray-100 pt-6">
+                    <div>
                         Showing 1 to 7 of 135 Applications
                     </div>
                     <div class="flex items-center gap-2">
-                        <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 flex items-center gap-1">
+                        <button class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 flex items-center gap-2 transition">
                             <i class="fa-solid fa-angles-left text-xs"></i> Previous
                         </button>
-                        <button class="w-8 h-8 bg-dashboardBlue text-white rounded flex items-center justify-center">1</button>
-                        <button class="w-8 h-8 border border-gray-300 rounded hover:bg-gray-50 flex items-center justify-center">2</button>
-                        <button class="w-8 h-8 border border-gray-300 rounded hover:bg-gray-50 flex items-center justify-center">3</button>
-                        <span class="px-2">...</span>
-                        <button class="w-8 h-8 border border-gray-300 rounded hover:bg-gray-50 flex items-center justify-center">7</button>
-                        <button class="px-4 py-1 border border-gray-300 rounded hover:bg-gray-50 flex items-center gap-1">
+                        
+                        <button class="w-9 h-9 border border-gray-300 rounded hover:bg-gray-50 flex items-center justify-center transition bg-white font-medium text-gray-700">1</button>
+                        <button class="w-9 h-9 border border-gray-300 rounded hover:bg-gray-50 flex items-center justify-center transition">2</button>
+                        <button class="w-9 h-9 border border-gray-300 rounded hover:bg-gray-50 flex items-center justify-center transition">3</button>
+                        <span class="px-2 text-gray-400">...</span>
+                        <button class="w-9 h-9 border border-gray-300 rounded hover:bg-gray-50 flex items-center justify-center transition">7</button>
+                        
+                        <button class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 flex items-center gap-2 transition">
                             Next <i class="fa-solid fa-angles-right text-xs"></i>
                         </button>
                     </div>

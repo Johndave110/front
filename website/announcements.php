@@ -48,12 +48,16 @@
         <main class="flex-1 p-8 overflow-y-auto">
             
             <div class="bg-white p-6 rounded-lg shadow-sm mb-6 border border-gray-100">
-                <h2 class="text-2xl font-bold text-gray-900">Announcement</h2>
-                <p class="text-gray-600 mb-4">Create and manage announcement</p>
-                
-                <button class="bg-dashboardBlue text-white py-2.5 px-6 rounded font-bold hover:bg-indigo-900 transition shadow-md text-sm">
-                    Add Announcment
-                </button>
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold text-gray-900">Announcement</h2>
+                    <p class="text-gray-600 mt-1">Create and manage announcement</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
+                        Add Announcement
+                    </button>
+                </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-md p-6 mb-6">
