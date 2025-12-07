@@ -168,8 +168,8 @@
                         <div class="md:col-span-4">
                             <label class="block text-sm font-semibold mb-2 text-black">Date of Birth <span class="text-orange-500">*</span></label>
                             <div class="relative">
-                                <input type="text" placeholder="dd / mm / yy" class="w-full border border-gray-300 rounded-md p-3 text-gray-500">
-                                <div class="absolute inset-y-0 right-0 flex items-center px-3 text-black text-lg"><i class="fa-regular fa-calendar"></i></div>
+                                <input type="date" placeholder="dd / mm / yy" class="w-full border border-gray-300 rounded-md p-3 text-gray-500">
+                                <div class="absolute inset-y-0 right-0 flex items-center px-3 text-black text-lg"></div>
                             </div>
                         </div>
                         <div class="md:col-span-2">
