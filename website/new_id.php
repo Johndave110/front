@@ -226,7 +226,7 @@
 
                     <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-gray-200">
                         <div class="flex gap-4 w-full md:w-auto">
-                            <button type="button" class="w-full md:w-auto px-6 py-3 border border-gray-400 rounded-lg text-black font-medium hover:bg-gray-50">Cancel</button>
+                            <button type="button" class="w-full md:w-auto px-6 py-3 border border-gray-400 rounded-lg text-black font-medium hover:bg-gray-50">Back</button>
                             <button type="button" class="w-full md:w-auto px-6 py-3 border border-gray-400 rounded-lg text-black font-medium hover:bg-gray-50">Reset Form</button>
                         </div>
                         <div class="flex gap-4 w-full md:w-auto">
