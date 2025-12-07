@@ -24,10 +24,10 @@
             }
         }
     </script>
-    <style>
+    <style> 
         /* Custom scrollbar */
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-track { background: #ffffffff; }
         ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
     </style>
 </head>

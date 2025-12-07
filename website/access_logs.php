@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accounts Settings - OSCA</title>
+    <title>Access Logs - OSCA</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -36,7 +36,8 @@
 
     <?php
     // Sets the active page for sidebar highlighting
-    $current_page = basename($_SERVER['PHP_SELF']);
+    // You might want to manually set this to 'accounts.php' if you want the Accounts tab to stay highlighted
+    $current_page = 'accounts.php'; 
     ?>
 
     <?php include 'sidebar.php'; ?>
@@ -56,7 +57,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                     <a href="add_user.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
-                        Add Account
+                        Add User
                     </a>
                 </div>
 
@@ -64,7 +65,7 @@
 
             <div class="bg-white rounded-lg shadow-md p-6">
                 
-                <h3 class="text-lg font-bold text-black mb-4">User List</h3>
+                <h3 class="text-lg font-bold text-black mb-4">Access Logs</h3>
 
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
                     
@@ -75,13 +76,14 @@
                             </span>
                             <input type="text" placeholder="Search By Name" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-dashboardBlue text-sm">
                         </div>
+                        
                         <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 text-gray-600 transition" title="Refresh">
                             <i class="fa-solid fa-rotate"></i>
                         </button>
                     </div>
 
-                    <a href="access_logs.php" class="px-6 py-2 border border-gray-400 rounded text-sm font-medium hover:bg-gray-50 text-gray-700 transition">
-                        Access Logs
+                    <a href="accounts.php" class="px-6 py-2 border border-gray-400 rounded text-sm font-medium hover:bg-gray-50 text-gray-700 transition">
+                        User List
                     </a>
                 </div>
 
@@ -96,107 +98,91 @@
                     <table class="w-full text-left border-collapse min-w-[800px]">
                         <thead>
                             <tr class="text-black font-bold text-sm border-b border-gray-200">
-                                <th class="pb-4 pl-2 w-1/4">User</th>
-                                <th class="pb-4 w-1/4">Role <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer"></i></th>
-                                <th class="pb-4 w-1/4">Date Created <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer"></i></th>
-                                <th class="pb-4 w-1/4">Actions</th>
+                                <th class="pb-4 pl-2 w-1/6">User <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer"></i></th>
+                                <th class="pb-4 w-1/5">Access Type <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer"></i></th>
+                                <th class="pb-4 w-1/6">Date <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer"></i></th>
+                                <th class="pb-4 w-1/6">Time <i class="fa-solid fa-sort text-gray-400 ml-1 cursor-pointer"></i></th>
+                                <th class="pb-4 w-1/6">IP Address</th>
+                                <th class="pb-4 w-1/6 text-center">Actions</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-800 text-sm">
                             
                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
                                 <td class="pl-2">Ahmadnur Jul</td>
-                                <td>Admin</td>
-                                <td>Oct. 3, 2025 2:30 PM</td>
-                                <td>
-                                    <div class="flex items-center gap-3">
-                                        <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
-                                            View
-                                        </button>
-                                        <button class="text-green-600 hover:text-green-800 text-lg">
-                                            <i class="fa-regular fa-pen-to-square"></i>
-                                        </button>
-                                    </div>
+                                <td>Google Chrome(Browser)</td>
+                                <td>Oct. 3, 2025</td>
+                                <td>2:30 PM</td>
+                                <td>Localhost</td>
+                                <td class="text-center">
+                                    <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        View
+                                    </button>
                                 </td>
                             </tr>
 
                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
                                 <td class="pl-2">Juan Dela Cruz</td>
-                                <td>Admin</td>
-                                <td>Oct. 3, 2025 2:30 PM</td>
-                                <td>
-                                    <div class="flex items-center gap-3">
-                                        <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
-                                            View
-                                        </button>
-                                        <button class="text-green-600 hover:text-green-800 text-lg">
-                                            <i class="fa-regular fa-pen-to-square"></i>
-                                        </button>
-                                    </div>
+                                <td>Google Chrome(Browser)</td>
+                                <td>Oct. 3, 2025</td>
+                                <td>2:30 PM</td>
+                                <td>192.168.1.173</td>
+                                <td class="text-center">
+                                    <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        View
+                                    </button>
                                 </td>
                             </tr>
 
                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
                                 <td class="pl-2">Maria Ozawa</td>
-                                <td>Social Worker</td>
-                                <td>Oct. 3, 2025 2:30 PM</td>
-                                <td>
-                                    <div class="flex items-center gap-3">
-                                        <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
-                                            View
-                                        </button>
-                                        <button class="text-green-600 hover:text-green-800 text-lg">
-                                            <i class="fa-regular fa-pen-to-square"></i>
-                                        </button>
-                                    </div>
+                                <td>Google Chrome(Browser)</td>
+                                <td>Oct. 3, 2025</td>
+                                <td>2:30 PM</td>
+                                <td>192.168.1.173</td>
+                                <td class="text-center">
+                                    <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        View
+                                    </button>
                                 </td>
                             </tr>
 
                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
                                 <td class="pl-2">Juan Dela Cruz</td>
-                                <td>Social Worker</td>
-                                <td>Oct. 3, 2025 2:30 PM</td>
-                                <td>
-                                    <div class="flex items-center gap-3">
-                                        <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
-                                            View
-                                        </button>
-                                        <button class="text-green-600 hover:text-green-800 text-lg">
-                                            <i class="fa-regular fa-pen-to-square"></i>
-                                        </button>
-                                    </div>
+                                <td>Google Chrome(Browser)</td>
+                                <td>Oct. 3, 2025</td>
+                                <td>2:30 PM</td>
+                                <td>192.168.1.173</td>
+                                <td class="text-center">
+                                    <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        View
+                                    </button>
                                 </td>
                             </tr>
 
-                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
                                 <td class="pl-2">Juan Dela Cruz</td>
-                                <td>Social Worker</td>
-                                <td>Oct. 3, 2025 2:30 PM</td>
-                                <td>
-                                    <div class="flex items-center gap-3">
-                                        <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
-                                            View
-                                        </button>
-                                        <button class="text-green-600 hover:text-green-800 text-lg">
-                                            <i class="fa-regular fa-pen-to-square"></i>
-                                        </button>
-                                    </div>
+                                <td>Google Chrome(Browser)</td>
+                                <td>Oct. 3, 2025</td>
+                                <td>2:30 PM</td>
+                                <td>192.168.1.173</td>
+                                <td class="text-center">
+                                    <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        View
+                                    </button>
                                 </td>
                             </tr>
-
+                            
                              <tr class="border-b border-gray-100 hover:bg-gray-50 transition h-16">
                                 <td class="pl-2">Juan Dela Cruz</td>
-                                <td>Social Worker</td>
-                                <td>Oct. 3, 2025 2:30 PM</td>
-                                <td>
-                                    <div class="flex items-center gap-3">
-                                        <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
-                                            View
-                                        </button>
-                                        <button class="text-green-600 hover:text-green-800 text-lg">
-                                            <i class="fa-regular fa-pen-to-square"></i>
-                                        </button>
-                                    </div>
+                                <td>Brave(Browser)</td>
+                                <td>Oct. 3, 2025</td>
+                                <td>2:30 PM</td>
+                                <td>192.168.1.173</td>
+                                <td class="text-center">
+                                    <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                        View
+                                    </button>
                                 </td>
                             </tr>
 
@@ -212,6 +198,7 @@
                     <button class="w-10 h-10 border border-gray-400 rounded hover:bg-gray-50 flex items-center justify-center transition text-gray-800 font-medium">1</button>
                     <button class="w-10 h-10 border border-gray-400 rounded hover:bg-gray-50 flex items-center justify-center transition text-gray-800 font-medium">2</button>
                     <button class="w-10 h-10 border border-gray-400 rounded hover:bg-gray-50 flex items-center justify-center transition text-gray-800 font-medium">3</button>
+                    
                     <button class="w-10 h-10 border border-gray-400 rounded hover:bg-gray-50 flex items-center justify-center transition text-gray-800 font-medium">3</button>
                     <button class="w-10 h-10 border border-gray-400 rounded hover:bg-gray-50 flex items-center justify-center transition text-gray-800 font-medium">3</button>
                     
