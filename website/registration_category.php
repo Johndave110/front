@@ -55,9 +55,9 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
+                    <a href="new_id.php" class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md flex items-center justify-center gap-2">
                         <i class="fa-solid fa-plus"></i> New ID
-                    </button>
+                    </a>
                     <button class="bg-dashboardBlue text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-900 transition shadow-md">
                         Revalidation/Update
                     </button>
