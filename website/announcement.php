@@ -94,9 +94,9 @@
                                 <td class="py-4">Oct 25, 2025 <span class="ml-2 text-gray-500">9:00 AM</span></td>
                                 <td class="py-4">Barangay Hall</td>
                                 <td class="py-4 text-center">
-                                    <button class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
+                                    <a href="view_event.php" class="px-6 py-1 border border-dashboardBlue text-dashboardBlue rounded text-xs font-medium hover:bg-indigo-50 transition">
                                         View
-                                    </button>
+                                    </a>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
