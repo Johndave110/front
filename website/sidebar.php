@@ -71,8 +71,8 @@
             </li>
 
             <li>
-                <a href="announcements.php" 
-                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'announcements.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
+                <a href="announcement.php" 
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'announcement.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-bullhorn w-5"></i>
                    Announcements
                 </a>
