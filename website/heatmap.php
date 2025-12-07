@@ -44,6 +44,16 @@
     <div class="ml-64 w-full min-h-screen flex flex-col">
         
         <?php include 'header.php'; ?>
+
+        <main class="flex-1 p-8 overflow-y-auto">
+            
+            <div class="bg-white p-6 rounded-lg shadow-sm mb-6 border border-gray-100">
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold text-gray-900">AI-Powered Heat Mapping</h2>
+                    <p class="text-gray-600 mt-1">See Archives of Application, Registered Senior and Complaints</p>
+                </div>
+            </div>
+        </main>
     </div>
 
 </body>

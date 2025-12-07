@@ -85,7 +85,7 @@
                 <p class="text-sm text-gray-600">Renew Senior Citizen ID</p>
             </div>
             
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4 w-full md:w-auto">
                 <label class="font-bold text-black text-sm md:text-base hidden md:block">Transaction Type:</label>
                 <div class="relative">
                     <select class="appearance-none border border-gray-300 rounded-md px-4 py-2 w-56 text-gray-700 bg-white focus:outline-none focus:border-blue-900 shadow-sm font-medium">

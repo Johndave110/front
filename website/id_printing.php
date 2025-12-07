@@ -71,8 +71,8 @@
                     </div>
 
                     <div class="flex gap-2">
-                        <button class="px-4 py-2.5 border border-gray-400 rounded-md text-sm font-medium hover:bg-gray-50 text-gray-700 flex items-center gap-2 transition shadow-sm">
-                            <i class="fa-regular fa-file-excel text-green-600 text-lg"></i> Export to Excel
+                        <button class="px-4 py-2 border border-gray-400 rounded text-sm font-medium hover:bg-gray-50 text-gray-700 flex items-center gap-2 transition">
+                            <i class="fa-regular fa-file-excel text-green-600"></i> Export to Excel
                         </button>
                     </div>
                 </div>
