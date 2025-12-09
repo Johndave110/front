@@ -65,7 +65,7 @@
         
         <div class="bg-white border border-gray-300 rounded-lg p-4 mb-6 flex justify-between items-center shadow-sm">
             <h2 class="text-xl font-bold text-gray-800">Add User Account</h2>
-            <button class="border border-gray-300 text-gray-500 font-medium text-sm px-6 py-2 rounded bg-white hover:bg-gray-50">Input Osca ID</button>
+            <input class="border border-gray-300 text-gray-500 font-medium text-sm px-6 py-2 rounded bg-white hover:bg-gray-50" placeholder="Input OSCA ID">
         </div>
 
         <form>
