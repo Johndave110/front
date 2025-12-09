@@ -7,81 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
-        
-        /* Brand Colors */
-        .brand-blue { background-color: #0b2566; }
-        .brand-blue-text { color: #0b2566; }
-        
-        /* Stepper Styles */
-        .step-active { 
-            background-color: #0b2566; 
-            color: white; 
-            border: 1px solid #0b2566;
-        }
-        .step-inactive { 
-            background-color: #f3f4f6; 
-            color: #6b7280; 
-            border: 1px solid #e5e7eb; 
-        }
-
-        /* Triangle indicator for the active step */
-        .step-indicator::after {
-            content: '';
-            position: absolute;
-            bottom: -6px;
-            left: 50%;
-            transform: translateX(-50%) rotate(45deg);
-            width: 12px;
-            height: 12px;
-            background-color: #0b2566;
-        }
-
-        /* Input Focus Styles */
-        input:focus, select:focus {
-            outline: none;
-            border-color: #0b2566;
-            box-shadow: 0 0 0 1px #0b2566;
-        }
-
-        /* Checkbox size for Step 3 & 4 */
-        .checkbox-lg {
-            width: 1.25rem;
-            height: 1.25rem;
-        }
-
-        /* File Input Styling */
-        input[type="file"]::file-selector-button {
-            border: 1px solid #d1d5db;
-            padding: 0.4rem 1rem;
-            border-radius: 0.3rem;
-            background-color: #e5e7eb;
-            color: #374151;
-            font-weight: 500;
-            margin-right: 1rem;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        input[type="file"]::file-selector-button:hover {
-            background-color: #d1d5db;
-        }
-        
-        /* Transitions */
-        .fade-in {
-            animation: fadeIn 0.3s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #ffffffff; }
-        ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
-    </style>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="text-gray-700 flex flex-col min-h-screen">
+<body class="inter-body text-gray-700 flex flex-col min-h-screen">
 
     <header class="bg-white border-b border-gray-200 py-3 px-4 md:px-8 flex justify-between items-center sticky top-0 z-20">
         <div class="flex items-center gap-4">

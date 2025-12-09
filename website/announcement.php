@@ -25,12 +25,7 @@
             }
         }
     </script>
-    <style>
-        /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #ffffffff; }
-        ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
-    </style>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="bg-osca-bg font-sans flex text-gray-800">
 
