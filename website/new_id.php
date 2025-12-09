@@ -99,7 +99,7 @@
                 <p class="text-[10px] text-gray-500 font-semibold uppercase">Social Worker Coordinator</p>
             </div>
             <div class="h-9 w-9 rounded-full border border-gray-300 flex items-center justify-center text-gray-800 text-lg">
-                <i class="fa-regular fa-circle-user"></i>
+                <i class="fa-regular fa-user text-xl"></i>
             </div>
         </div>
     </header>
