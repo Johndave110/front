@@ -1,4 +1,4 @@
-<aside class="w-64 bg-dashboardBlue text-white fixed h-full left-0 top-0 flex flex-col z-50 shadow-2xl font-sans">
+<aside class="w-64 brand-blue text-white fixed h-full left-0 top-0 flex flex-col z-50 shadow-2xl font-sans">
     
     <div class="px-6 py-6 flex items-center gap-3">
         <div class="h-12 w-12 bg-yellow-400 rounded-full flex items-center justify-center border-2 border-white overflow-hidden shrink-0">
@@ -48,7 +48,7 @@
 
             <li>
                 <a href="accounts.php" 
-                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'accounts.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'accounts.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-user-gear w-5"></i>
                    Accounts
                 </a>
@@ -56,7 +56,7 @@
 
             <li>
                 <a href="archives.php" 
-                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'archives.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'archives.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-box-archive w-5"></i>
                    Archives
                 </a>
@@ -64,7 +64,7 @@
 
             <li>
                 <a href="heatmap.php" 
-                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'heatmap.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'heatmap.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-map-location-dot w-5"></i>
                    Heat Map
                 </a>
@@ -72,7 +72,7 @@
 
             <li>
                 <a href="announcement.php" 
-                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'announcement.php' || $current_page == 'new_id.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg <?php echo ($current_page == 'announcement.php') ? 'bg-white/10 font-bold text-white' : 'font-medium text-white/80 hover:bg-white/5 hover:text-white transition'; ?>">
                    <i class="fa-solid fa-bullhorn w-5"></i>
                    Announcements
                 </a>
@@ -86,7 +86,8 @@
     </div>
 
     <div class="p-6">
-        <a href="#" class="flex items-center justify-center gap-2 font-bold text-center text-white hover:text-gray-200 transition">
+        <a href="profile.php" 
+           class="flex items-center justify-center gap-2 px-3 py-2 rounded-lg <?php echo ($current_page == 'settings.php' || $current_page == 'profile.php') ? 'bg-white/10 font-bold text-white' : 'font-bold text-center text-white hover:text-gray-200 transition'; ?>">
             <i class="fa-solid fa-gear"></i>
             Settings
         </a>
