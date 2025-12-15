@@ -77,8 +77,7 @@
                         <div><label class="block text-sm font-semibold mb-2 text-black">Extension</label><input type="text" class="w-full border border-gray-300 rounded-md p-3 text-gray-700"></div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-5">
-                         <div><label class="block text-sm font-semibold mb-2 text-black">House No. <span class="text-orange-500">*</span></label><input type="text" class="w-full border border-gray-300 rounded-md p-3 text-gray-700"></div>
-                         <div class="md:col-span-2"><label class="block text-sm font-semibold mb-2 text-black">Street <span class="text-orange-500">*</span></label><input type="text" class="w-full border border-gray-300 rounded-md p-3 text-gray-700"></div>
+                         <div class="md:col-span-2"><label class="block text-sm font-semibold mb-2 text-black">Adress <span class="text-orange-500">*</span></label><input type="text" class="w-full border border-gray-300 rounded-md p-3 text-gray-700"></div>
                     </div>
                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5">
                         <div>
